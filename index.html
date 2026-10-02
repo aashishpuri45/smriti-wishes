@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050509">
+  <meta name="description" content="A little universe of birthday wishes for Smriti Joshi, made by Aashish.">
+  <title>For Smriti Joshi ✦</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="nebula nebula-one"></div><div class="nebula nebula-two"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="signature" href="#top" aria-label="Back to top">S<span>✦</span></a>
+    <div class="top-actions">
+      <span class="for-you">A LITTLE SOMETHING FOR YOU</span>
+      <button class="music-toggle" id="musicToggle" aria-pressed="false">
+        <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span id="musicLabel">Play piano</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow reveal">A LITTLE UNIVERSE, JUST FOR YOU</p>
+      <div class="orbit" aria-hidden="true">
+        <span class="orbit-ring ring-one"></span><span class="orbit-ring ring-two"></span>
+        <span class="orbit-star">✦</span><span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span>
+      </div>
+      <p class="pre-title reveal delay-one">TODAY, THE STARS CELEBRATE</p>
+      <h1 class="reveal delay-one">Happy Birthday,<br><em>Smriti Joshi</em></h1>
+      <p class="hero-copy reveal delay-two">The world is big, the universe is endless — and today, a little corner of it is just for you.</p>
+      <button class="primary-button reveal delay-three" id="wishButton"><span>Open your little surprise</span><span class="button-arrow">↗</span></button>
+      <p class="scroll-note reveal delay-three"><span></span> MADE OF STARDUST & GOOD WISHES</p>
+      <div class="side-coordinate left-coordinate">27°42′N &nbsp; 85°19′E</div>
+      <div class="side-coordinate right-coordinate">A DAY TO REMEMBER · ✦</div>
+    </section>
+
+    <section class="message-section" id="message">
+      <div class="section-mark">✦ &nbsp; A NOTE FOR YOU &nbsp; ✦</div>
+      <div class="message-card">
+        <div class="card-glow"></div><div class="card-corner corner-a"></div><div class="card-corner corner-b"></div>
+        <p class="small-label">DEAR SMRITI</p>
+        <h2>May this new chapter<br>feel like <em>magic.</em></h2>
+        <div class="fine-line"></div>
+        <p class="birthday-message">
+          I hope this year brings you quiet happiness, unexpected reasons to laugh, people who make life feel lighter,
+          and dreams that slowly turn into memories you’re proud of. May you always find the courage to be yourself,
+          the patience to grow at your own pace, and a thousand little moments that remind you how special life can be.
+        </p>
+        <p class="closing">Keep shining, in your own way. <span>✧</span></p>
+      </div>
+      <p class="bottom-note">THE UNIVERSE IS A LITTLE BRIGHTER WITH YOU IN IT.</p>
+    </section>
+
+    <section class="gallery-section" id="memories">
+      <div class="section-mark">✦ &nbsp; LITTLE MOMENTS, BIG MEMORIES &nbsp; ✦</div>
+      <h2 class="gallery-title">A few frames of <em>you.</em></h2>
+      <p class="gallery-intro">Every picture keeps a little piece of a moment. These are yours to fill.</p>
+      <div class="gallery-grid">
+        <button class="photo-card photo-tall" data-photo="smriti-1.jpg" aria-label="View first photo">
+          <img src="photos/smriti-1.jpg" alt="Smriti — memory one" loading="lazy">
+          <span class="photo-fallback"><b>01</b><span>Add your favourite photo</span><small>photos/smriti-1.jpg</small></span>
+          <span class="photo-caption">A moment worth keeping <i>✦</i></span>
+        </button>
+        <button class="photo-card photo-wide" data-photo="smriti-2.jpg" aria-label="View second photo">
+          <img src="photos/smriti-2.jpg" alt="Smriti — memory two" loading="lazy">
+          <span class="photo-fallback"><b>02</b><span>A smile to remember</span><small>photos/smriti-2.jpg</small></span>
+          <span class="photo-caption">The little things <i>✦</i></span>
+        </button>
+        <button class="photo-card photo-third" data-photo="smriti-3.jpg" aria-label="View third photo">
+          <img src="photos/smriti-3.jpg" alt="Smriti — memory three" loading="lazy">
+          <span class="photo-fallback"><b>03</b><span>One more memory</span><small>photos/smriti-3.jpg</small></span>
+          <span class="photo-caption">A day in the stars <i>✦</i></span>
+        </button>
+      </div>
+      <p class="gallery-hint">PERSONALIZE THIS SPACE WITH YOUR OWN PHOTOS</p>
+    </section>
+
+    <section class="final-section">
+      <div class="final-star">✦</div>
+      <p class="eyebrow">ONE MORE THING</p>
+      <h2>Make a wish,<br><em>Smriti.</em></h2>
+      <p>Close your eyes for a second. Think of something you hope the next year brings you.</p>
+      <button class="wish-button" id="wishStarButton">Send your wish into the stars <span>✧</span></button>
+      <p class="footer-signoff">Made with warmth, just for you <span>♡</span><b>— Aashish</b></p>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo">×</button>
+    <img id="lightboxImage" src="" alt="Expanded memory">
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite">Your wish is on its way ✦</div>
+  <audio id="backgroundMusic" src="music.mp3" loop preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
